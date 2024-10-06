@@ -1,10 +1,10 @@
 import TaskbarItem from "./TaskbarItem"
 
-function Taskbar({ minimizedWindows, onRestore }) {
+function Taskbar({ windows }) {
     return (
         <footer className="h-10 w-screen flex taskbar bottom-0 absolute z-[99]">
-            {minimizedWindows.map((title, index) => (
-                <TaskbarItem key={index} title={title} onClick={onRestore(title)}/>
+            {windows.map((title, index) => (
+                <TaskbarItem key={index} title={title}/>
             ))}
         </footer>
     )
